@@ -3,12 +3,22 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Assignment_Frames {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		
+		// TODO Auto-generated method stub
+        WebDriverManager.edgedriver().setup();
+		 EdgeDriver driver = new EdgeDriver();
+		
+		
 
 		// get the url
 		driver.get("https://the-internet.herokuapp.com/");
@@ -22,7 +32,7 @@ public class Assignment_Frames {
 
 		// define implicit wait for
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
 		// first capture parent frame
 		driver.switchTo().frame("frame-top");

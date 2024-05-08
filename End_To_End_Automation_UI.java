@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import org.openqa.selenium.support.ui.Select;
@@ -11,8 +12,10 @@ import org.openqa.selenium.support.ui.Select;
 public class End_To_End_Automation_UI {
 
 	public static void main(String[] args) throws InterruptedException {
+		
+		
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
 
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
@@ -22,15 +25,13 @@ public class End_To_End_Automation_UI {
 		Actions element = new Actions(driver);
 		String city = "Bengaluru (BLR)";
 
-		WebElement from = driver
-				.findElement(By.xpath("//*[@id='dropdownGroup1']/div/ul/li/a[contains(text(),'" + city + "')]"));
+		WebElement from = driver.findElement(By.xpath("//*[@id='dropdownGroup1']/div/ul/li/a[contains(text(),'" + city + "')]"));
 		from.click();
 
 		// Thread.sleep(3000);
 		String To = "Belagavi (IXG)";
 
-		WebElement ele2 = driver
-				.findElement(By.xpath("//*[@id='dropdownGroup1']/div/ul/li/a[contains(text(),'" + To + "')]"));
+		WebElement ele2 = driver.findElement(By.xpath("//*[@id='dropdownGroup1']/div/ul/li/a[contains(text(),'" + To + "')]"));
 		ele2.click();
 
 		driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
