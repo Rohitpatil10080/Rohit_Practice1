@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Loan Department" parallel="tests" thread-count="6"> <!-- Added parallel attribute and fixed the thread-count attribute -->
+
+    <test name="personal loan"> <!-- Defines a TestNG test named "personal loan" with thread count 5 -->
+        <parameter name="URL" value="personalloan.com"/> <!-- Specifies a parameter named "URL" with value "personalloan.com" -->
+        <parameter name="API/Key" value="123456"/> <!-- Specifies a parameter named "API/Key" with value "123456" -->
+        <classes>
+            <class name="test.Day1"> <!-- Includes the test class "Day1" -->
+                <methods>
+                    <include name="Demo" /> <!-- Includes the test method "Demo" from class "Day1" -->
+                </methods>
+            </class>
+            <class name="test.Day2" /> <!-- Includes the test class "Day2" -->
+            <class name="test.Day4" /> <!-- Includes the test class "Day4" -->
+        </classes>
+    </test>
+    
+    <test name="car loan"> <!-- Defines another TestNG test named "car loan" -->
+        <parameter name="URL" value="carloan.com"/> <!-- Specifies a parameter named "URL" with value "carloan.com" -->
+        <classes>
+            <class name="test.Day3"> <!-- Includes the test class "Day3" -->
+                <methods>
+                    <exclude name="loginAPICarLoan" /> <!-- Excludes the test method "loginAPICarLoan" from class "Day3" -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
+<!-- **\<suite>**: Defines a TestNG suite.
+	
+- **\<test>**: Defines a TestNG test within the suite.
+	
+- **\<parameter>**: Specifies parameters to be passed to the test methods.
+	
+- **\<classes>**: Contains the test classes to be included in the test.
+	
+- **\<class>**: Specifies the test class to include.
+	
+- **\<methods>**: Contains the methods to be included or excluded from the test class.
+	
+- **\<include>**: Specifies the method to include in the test.
+	
+- **\<exclude>**: Specifies the method to exclude from the test.
+	
+*/
+-->
