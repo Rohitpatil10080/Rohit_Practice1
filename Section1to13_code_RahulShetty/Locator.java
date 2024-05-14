@@ -19,6 +19,7 @@ public class Locator {
         //in css we can give index number we give like //Tagname[@attribute='value']:nth-chield(index no)
 		
 		
+<<<<<<< HEAD
 		 // Create a new FirefoxDriver instance
         WebDriver driver = new FirefoxDriver();
         
@@ -68,6 +69,32 @@ public class Locator {
         Thread.sleep(2000);
         
         // Enter phone number for password reset
+=======
+		WebDriver driver=new FirefoxDriver();
+		String name="Rohit";
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		String password=getpassword(driver);
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.id("inputUsername")).sendKeys("name");
+		driver.findElement(By.name("inputPassword")).sendKeys("password");
+		driver.findElement(By.xpath(".//label[contains(text(),' Remember my username')]")).click();
+		driver.findElement(By.xpath(".//input[@value='agreeTerms']")).click();
+		driver.findElement(By.xpath(".//button[@type='submit']")).click();
+		//Thread.sleep(4000);
+		System.out.println(driver.findElement(By.cssSelector(".error")).getText());
+		driver.findElement(By.xpath(".//a[contains(text(),'Forgot your password?')]")).click();
+        driver.findElement(By.xpath(".//input[@placeholder='Name']")).sendKeys("rohitpatil3353");
+        Thread.sleep(6000);
+        driver.findElement(By.xpath(".//input[@placeholder='Email']")).sendKeys("rohit@gmail.com");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(".//input[@placeholder='Email']")).clear();
+        driver.findElement(By.xpath("//input[@type='text'][2]")).sendKeys("rohit10080@gmail.com");
+        Thread.sleep(2000);
+        
+        //driver.findElement(By.xpath(".//input[@placeholder='Phone Number']")).sendKeys("1234567891");
+        
+        //parent chield 
+>>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
         driver.findElement(By.xpath("//form/input[3]")).sendKeys("123456789");
  /* ------------------------------------------------------------------------------------------------------------------------------      
         //1) contains method
@@ -106,6 +133,7 @@ public class Locator {
  ---------------------------------------------------------------------------------------------------------------------------------*/
         //contains method
         
+<<<<<<< HEAD
         // Click on "Reset Login" button using contains method in XPath
         driver.findElement(By.xpath("//button[contains(text(),'Reset Login')]")).click();
         
@@ -139,6 +167,31 @@ public class Locator {
         driver.close();
     }
 
+=======
+        driver.findElement(By.xpath("//button[contains(text(),'Reset Login')]")).click();
+        
+        
+       System.out.println( driver.findElement(By.cssSelector("form p")).getText());
+       driver.findElement(By.cssSelector(".go-to-login-btn")).click();
+        
+        //driver.findElement(By.xpath(".//button[@class='go-to-login-btn']")).click();
+       // driver.findElement(By.xpath("//button[@id='visitUsTwo']")).click();
+       
+       
+       driver.findElement(By.cssSelector("#inputUsername")).sendKeys("name");
+       driver.findElement(By.cssSelector("input[type*='pass']")).sendKeys("rahulshettyacademy");
+       Thread.sleep(1000);
+       driver.findElement(By.cssSelector("#chkboxOne")).click();
+       driver.findElement(By.cssSelector("#chkboxTwo")).click();
+       driver.findElement(By.cssSelector("button[type*='submit']")).click();
+       Thread.sleep(2000);
+      System.out.println( driver.findElement(By.cssSelector("div p")).getText());
+      //Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(),"Hello"+name+",");
+   Thread.sleep(2000);
+    driver.findElement(By.xpath("//button[text()='Log Out']")).click();
+    driver.close();
+   
+>>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
   
      
     
@@ -147,6 +200,7 @@ public class Locator {
    
       
       
+<<<<<<< HEAD
 	
 	
 	public static String getpassword(WebDriver driver) throws InterruptedException {
@@ -175,6 +229,21 @@ public class Locator {
 	    return password;
 	}
 
+=======
+	}
+	
+	public static String getpassword(WebDriver driver) throws InterruptedException
+	{
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.linkText("Forgot your password?")).click();
+		Thread.sleep(2000);
+	    driver.findElement(By.xpath("//button[contains(text(),'Reset Login')]")).click();
+	    String passwordtext= driver.findElement(By.cssSelector("form p")).getText();
+	   String[] passwordarray =passwordtext.split("'");
+	  // String[] passwordarray2=passwordarray[1].split("'");
+	   String password=passwordarray[1];
+	       return password;
+>>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
 	  
 			   //Please use temporary password 'rahulshettyacademy' to Login.
 	   
@@ -190,6 +259,12 @@ public class Locator {
 
 		
 
+<<<<<<< HEAD
 }
 
 
+=======
+	}
+
+}
+>>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6

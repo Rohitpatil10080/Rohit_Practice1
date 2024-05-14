@@ -17,6 +17,7 @@ public class End_To_End_Automation_UI {
 	public static void main(String[] args) throws InterruptedException {
 		
 		
+<<<<<<< HEAD
 
 		   // Setup Firefox WebDriver
         WebDriverManager.firefoxdriver().setup(); // Sets up the Firefox WebDriver
@@ -24,6 +25,10 @@ public class End_To_End_Automation_UI {
         // Create a new FirefoxDriver instance
         FirefoxDriver driver = new FirefoxDriver(); // Creates a new FirefoxDriver object and assigns it to the WebDriver interface
 
+=======
+
+		WebDriver driver = new FirefoxDriver();
+>>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
 
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 

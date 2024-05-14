@@ -1,9 +1,14 @@
 package Section1to13_code_RahulShetty;
+<<<<<<< HEAD
+=======
+import java.util.List;
+>>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+<<<<<<< HEAD
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -41,4 +46,24 @@ public class Section12_assignment {
         // Close the browser
         driver.quit();
     }
+=======
+
+public class Section12_assignment {
+
+	public static void main(String[] args) {
+
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+
+		WebElement count = driver.findElement(By.id("product"));
+		System.out.println(count.findElements(By.tagName("tr")).size());
+
+		//System.out.println("Total column present " + driver.findElements(By.xpath("//tbody/tr/td[2]")).size());
+		System.out.println("Total rows present " + driver.findElements(By.xpath("//tbody/tr/th")).size());
+
+		System.out.println(driver.findElement(By.xpath("//tbody/dtr[3]")).getText());
+
+	}
+
+>>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
 }
