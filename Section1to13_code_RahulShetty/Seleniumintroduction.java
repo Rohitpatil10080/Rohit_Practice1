@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Seleniumintroduction {
 
 	public static void main(String[] args) {
@@ -21,7 +23,12 @@ public class Seleniumintroduction {
 		
 		//System.setProperty("webdriver.gecko.driver", "file path");
 		
-		WebDriver driver =new FirefoxDriver();
+		   // Setup Firefox WebDriver
+        WebDriverManager.firefoxdriver().setup(); // Sets up the Firefox WebDriver
+
+        // Create a new FirefoxDriver instance
+        FirefoxDriver driver = new FirefoxDriver(); // Creates a new FirefoxDriver object and assigns it to the WebDriver interface
+
 		driver.get("https://rahulshettyacademy.com/");
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());

@@ -34,7 +34,7 @@ public class Day3 { // Declaring a class named "Day3"
         System.out.println("After executing all methods in the class"); // Printing a message
     }
 
-    @Test(groups={"Smoke"}) // Declaring that this test method belongs to the "Smoke" group
+    @Test(groups={"smoke"}) // Declaring that this test method belongs to the "Smoke" group
     public void MobileLogincarLoan() { // Defining the test method
         // Appium automation code
         System.out.println("Mobilelogincar"); // Printing a message

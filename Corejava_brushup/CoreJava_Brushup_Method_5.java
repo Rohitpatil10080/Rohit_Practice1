@@ -1,4 +1,5 @@
 package Corejava_brushup;
+
 import Section1to13_code_RahulShetty.Method2;
 
 public class CoreJava_Brushup_Method_5 {

@@ -3,14 +3,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Frame_DragandDrop {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+		   // Setup Firefox WebDriver
+        WebDriverManager.firefoxdriver().setup(); // Sets up the Firefox WebDriver
 
-		WebDriver driver = new ChromeDriver();
+        // Create a new FirefoxDriver instance
+        FirefoxDriver driver = new FirefoxDriver(); // Creates a new FirefoxDriver object and assigns it to the WebDriver interface
+
+
+		//WebDriver driver = new ChromeDriver();
 		driver.get("https://jqueryui.com/droppable/");
 
 		// here we can switching on i-frame our source and targeted element inside the

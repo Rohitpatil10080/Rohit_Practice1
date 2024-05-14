@@ -5,7 +5,7 @@ import org.testng.annotations.Test; // Importing Test annotation from TestNG
 
 public class Day2 { // Declaring a class named "Day2"
 
-    @Test(groups={"Smoke"}) // Indicating that this method is a TestNG test method and belongs to the "Smoke" group
+    @Test(groups={"smoke"}) // Indicating that this method is a TestNG test method and belongs to the "Smoke" group
     public void ploan() { // Defining the test method named "ploan"
         System.out.println("good"); // Printing "good"
     }

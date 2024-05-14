@@ -10,13 +10,20 @@ import org.openqa.selenium.interactions.Actions;
 
 import org.openqa.selenium.support.ui.Select;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class End_To_End_Automation_UI {
 
 	public static void main(String[] args) throws InterruptedException {
 		
 		
 
-		WebDriver driver = new FirefoxDriver();
+		   // Setup Firefox WebDriver
+        WebDriverManager.firefoxdriver().setup(); // Sets up the Firefox WebDriver
+
+        // Create a new FirefoxDriver instance
+        FirefoxDriver driver = new FirefoxDriver(); // Creates a new FirefoxDriver object and assigns it to the WebDriver interface
+
 
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 

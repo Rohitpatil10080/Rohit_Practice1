@@ -15,7 +15,7 @@ public class Day4 {
         System.out.println(URL); // Printing the received URL parameter
     }
 
-    @Test(groups={"Smoke"}) // Declaring that this test method belongs to the "Smoke" group
+    @Test(groups={"smoke"}) // Declaring that this test method belongs to the "Smoke" group
     public void MobileLoginHomeLoan() // Defining the test method
     {
         // Appium automation code

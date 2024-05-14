@@ -6,12 +6,19 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Assignment_Window_Handle {
 
 	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriverManager.firefoxdriver().setup();
+    	FirefoxDriver driver=new FirefoxDriver();
 
-		WebDriver driver = new ChromeDriver();
+
+		//WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		driver.get("https://the-internet.herokuapp.com/");
 

@@ -6,8 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Handling_Calender_UI {
 
@@ -17,8 +19,15 @@ public class Handling_Calender_UI {
 		String date = "15";
 		String year = "2027";
 		String[] Expectedlist = { monthNumber, date, year };
+		
+		   // Setup Firefox WebDriver
+        WebDriverManager.firefoxdriver().setup(); // Sets up the Firefox WebDriver
 
-		WebDriver driver = new ChromeDriver();
+        // Create a new FirefoxDriver instance
+        FirefoxDriver driver = new FirefoxDriver(); // Creates a new FirefoxDriver object and assigns it to the WebDriver interface
+
+
+	//	WebDriver driver = new ChromeDriver();
 
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
 

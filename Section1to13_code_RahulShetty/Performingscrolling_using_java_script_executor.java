@@ -6,7 +6,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Performingscrolling_using_java_script_executor {
 
@@ -20,9 +23,16 @@ public class Performingscrolling_using_java_script_executor {
 		// document.queryselector("locator").scrollTop(500)
 
 		// window.scrollBy-this for browser level
+		
+		   // Setup Firefox WebDriver
+        WebDriverManager.firefoxdriver().setup(); // Sets up the Firefox WebDriver
+
+        // Create a new FirefoxDriver instance
+        FirefoxDriver driver = new FirefoxDriver(); // Creates a new FirefoxDriver object and assigns it to the WebDriver interface
+
 
 		// WebDriver initialization
-		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
 
 		// Open the webpage
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
