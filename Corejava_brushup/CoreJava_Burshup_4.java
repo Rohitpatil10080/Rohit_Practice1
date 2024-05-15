@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 package  Corejava_brushup;
-=======
-package Corejava_brushup;
->>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
+
 
 public class CoreJava_Burshup_4 {
 

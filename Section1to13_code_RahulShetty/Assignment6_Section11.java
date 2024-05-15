@@ -1,8 +1,4 @@
 package Section1to13_code_RahulShetty;
-<<<<<<< HEAD
-=======
-import java.util.List;
->>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
 
 import java.util.List;
 import org.openqa.selenium.By;

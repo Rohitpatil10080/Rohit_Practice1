@@ -1,5 +1,4 @@
 package Section1to13_code_RahulShetty;
-<<<<<<< HEAD
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,36 +22,5 @@ public class Chield_element_Parent {
         // Finds the parent button element of the child button and prints its text
         System.out.println(driver.findElement(By.xpath("//header/div/button[1]/parent::div/button[2]")).getText());
     }
-=======
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class Chield_element_Parent {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		WebDriver driver=new ChromeDriver();
-		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
-		System.out.println(driver.findElement(By.xpath("//header/div/button[1]/parent::div/button[2]")).getText());
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-	}
->>>>>>> ad518d8cfaaf54beac8809fe1c68a5b538aa31c6
 
 }
