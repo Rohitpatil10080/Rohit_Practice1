@@ -1,5 +1,5 @@
 
-package rahulshettyacademy;
+package rahulshettyacademy.tests;
 
 import java.time.Duration;
 import java.util.List;
@@ -30,6 +30,8 @@ public class StandAloneTest {
 
 		// Navigate to website
 
+		
+		
 		driver.get("https://rahulshettyacademy.com/client/");
 
 		LandingPage landingpage = new LandingPage(driver);
